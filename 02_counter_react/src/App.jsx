@@ -6,28 +6,24 @@ import './App.css'
 
 function App() {
   let [counter, setCounter] = useState(15)
-  const addValue = () => {
-    console.log("clicked", counter)
-    setCounter(() => {
-      if (counter >= 20) setCounter(20)
-      else setCounter(counter + 1);
-    });
+
+  const updateCounter = (type) => {
+    if (type === 'add') {
+      setCounter((prev) => (prev < 20 ? prev + 1 : prev))
+    }
+    else {
+      setCounter((prev) => (prev > 0 ? prev - 1 : prev))
+    }
   }
-  const removeValue = () => {
-    console.log("clicked", counter)
-    setCounter(() => {
-      if (counter <= 0) setCounter(0)
-      else setCounter(counter - 1)
-    });
-  }
+
   return (
     <>
       <h1>chai aur react</h1>
       <h2>counter value: {counter}</h2>
 
-      <button onClick={addValue}>add values</button >
+      <button onClick={() => updateCounter('add')}>add values</button >
       <br />
-      <button onClick={removeValue}>remove values</button >
+      <button onClick={() => updateCounter('subtract')}>remove values</button >
     </>
   )
 }
