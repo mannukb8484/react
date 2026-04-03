@@ -8,8 +8,8 @@ function App() {
   return (
     <>
       <h1 className='text-center p-4 bg-blue-500'>Learn about redux toolkit</h1>
-      <AddTodo/>
-      <Todos/>
+      <AddTodo />
+      <Todos />
     </>
   )
 }

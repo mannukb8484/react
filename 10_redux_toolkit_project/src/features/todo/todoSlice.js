@@ -19,11 +19,6 @@ export const todoSlice = createSlice({
             console.log("Deleting ID:", action.payload);
             state.todos = state.todos.filter((curr_todo) => (curr_todo.id !== action.payload));
         },
-        // updateTodo: (state, action) => {
-        //     state.todos = state.todos.map((curr_todo) => ((curr_todo.id === action.payload.id) ?
-        //         { ...curr_todo, text: action.payload.text } :
-        //         curr_todo))
-        // }
     }
 })
 

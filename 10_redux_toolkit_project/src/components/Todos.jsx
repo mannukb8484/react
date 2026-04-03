@@ -4,7 +4,8 @@ import { removeTodo } from '../features/todo/todoSlice'
 
 function Todos() {
     //we got access to states and it has access to store
-    const todos = useSelector(state => state.todos)
+    // const todos = useSelector(state => state.todos)
+    const todos = useSelector(state => state.todo.todos)
     const dispatch = useDispatch()
     return (
         <>
